@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+
+service TestServrice {
+    rpc ping (serverARequest) returns (serverAResponse) {}
+}
+
+
+message serverARequest {
+    string name = 1;
+}
+
+message serverAResponse {
+    int64 statusCode = 1;
+    string message = 2;
+} 
